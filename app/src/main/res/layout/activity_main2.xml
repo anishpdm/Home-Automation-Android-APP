@@ -1,0 +1,27 @@
+<LinearLayout android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="#99ca70"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="user Name" />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <Button
+        android:id="@+id/but"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="login" />
+
+</LinearLayout>
+
+
+
