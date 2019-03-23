@@ -6,17 +6,49 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context="group1.home.HomeControls">
     <Button
+       android:textColor="#fff"
+        android:textSize="16dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/buutonstyle1"
         android:layout_width="match_parent"
         android:id="@+id/unlock"
-        android:text="Open door"
+        android:text="Light ON"
         android:layout_height="wrap_content" />
     <Button
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:background="@drawable/buutonstyle1"
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_marginTop="4dp"
         android:id="@+id/close"
-        android:text="Close door"
+        android:text="Light OFF"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:background="@drawable/buutonstyle1"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:id="@+id/fanOn"
+        android:text="FAN ON"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:background="@drawable/buutonstyle1"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:id="@+id/fanOff"
+        android:text="FAN OFF"
         android:layout_height="wrap_content" />
 </LinearLayout>

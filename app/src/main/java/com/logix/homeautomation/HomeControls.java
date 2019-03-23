@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
@@ -24,6 +25,8 @@ public class HomeControls extends AppCompatActivity {
     final String publishTopic = "Topic";
     final String publishMessagea= "a";
     final String publishMessageb = "b";
+    final String publishMessagec = "c";
+    final String publishMessaged = "d";
     private MqttAndroidClient mqttAndroidClient;
 
 
@@ -35,12 +38,33 @@ public class HomeControls extends AppCompatActivity {
 
         Button on = (Button) findViewById(R.id.unlock);
         Button off = (Button) findViewById(R.id.close);
+        Button fanon = (Button) findViewById(R.id.fanOn);
+        Button fanoff = (Button) findViewById(R.id.fanOff);
+
+        fanoff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                publishMessage(publishMessaged);
+                Toast.makeText(getApplicationContext(),"FAN OFF",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        fanon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                publishMessage(publishMessagec);
+                Toast.makeText(getApplicationContext(),"FAN ON",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
         on.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 publishMessage(publishMessagea);
+                Toast.makeText(getApplicationContext(),"LIGHT ON",Toast.LENGTH_LONG).show();
+
             }
         });
        off.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +72,8 @@ public class HomeControls extends AppCompatActivity {
             public void onClick(View v) {
 
                 publishMessage(publishMessageb);
+                Toast.makeText(getApplicationContext(),"LIGHT OFF",Toast.LENGTH_LONG).show();
+
             }
         });
 
