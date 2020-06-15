@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public class HomeControls extends AppCompatActivity {
 
-    final String serverUri = "tcp://192.168.31.236:1883";
+    final String serverUri = "tcp://3.23.47.3:1883";
     String clientId = "ExampleAndroidClient";
     final String subscriptionTopic = "Topic";
     final String publishTopic = "Topic";
